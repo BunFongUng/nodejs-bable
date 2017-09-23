@@ -1,0 +1,26 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+require('dotenv').config();
+
+const defaultConfig = {
+  PORT: process.env.PORT
+};
+
+const config = {
+  development: {
+    DB_URL: 'mongodb://localhost/setupbase-dev'
+  },
+  production: {
+    DB_URL: 'mongodb://localhost/setupbase-pro'
+  }
+};
+
+function getEnv(env) {
+  return config[env];
+}
+
+exports.default = Object.assign({}, defaultConfig, getEnv(process.env.NODE_ENV));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb25maWcvY29uc3RhbnRzLmpzIl0sIm5hbWVzIjpbInJlcXVpcmUiLCJjb25maWciLCJkZWZhdWx0Q29uZmlnIiwiUE9SVCIsInByb2Nlc3MiLCJlbnYiLCJkZXZlbG9wbWVudCIsIkRCX1VSTCIsInByb2R1Y3Rpb24iLCJnZXRFbnYiLCJOT0RFX0VOViJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQUEsUUFBUSxRQUFSLEVBQWtCQyxNQUFsQjs7QUFFQSxNQUFNQyxnQkFBZ0I7QUFDcEJDLFFBQU1DLFFBQVFDLEdBQVIsQ0FBWUY7QUFERSxDQUF0Qjs7QUFJQSxNQUFNRixTQUFTO0FBQ2JLLGVBQWE7QUFDWEMsWUFBUTtBQURHLEdBREE7QUFJYkMsY0FBWTtBQUNWRCxZQUFRO0FBREU7QUFKQyxDQUFmOztBQVNBLFNBQVNFLE1BQVQsQ0FBZ0JKLEdBQWhCLEVBQXFCO0FBQ25CLFNBQU9KLE9BQU9JLEdBQVAsQ0FBUDtBQUNEOztvQ0FHSUgsYSxFQUNBTyxPQUFPTCxRQUFRQyxHQUFSLENBQVlLLFFBQW5CLEMiLCJmaWxlIjoiY29uc3RhbnRzLmpzIiwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnZG90ZW52JykuY29uZmlnKCk7XG5cbmNvbnN0IGRlZmF1bHRDb25maWcgPSB7XG4gIFBPUlQ6IHByb2Nlc3MuZW52LlBPUlQsXG59O1xuXG5jb25zdCBjb25maWcgPSB7XG4gIGRldmVsb3BtZW50OiB7XG4gICAgREJfVVJMOiAnbW9uZ29kYjovL2xvY2FsaG9zdC9zZXR1cGJhc2UtZGV2JyxcbiAgfSxcbiAgcHJvZHVjdGlvbjoge1xuICAgIERCX1VSTDogJ21vbmdvZGI6Ly9sb2NhbGhvc3Qvc2V0dXBiYXNlLXBybycsXG4gIH0sXG59O1xuXG5mdW5jdGlvbiBnZXRFbnYoZW52KSB7XG4gIHJldHVybiBjb25maWdbZW52XTtcbn1cblxuZXhwb3J0IGRlZmF1bHQge1xuICAuLi5kZWZhdWx0Q29uZmlnLFxuICAuLi5nZXRFbnYocHJvY2Vzcy5lbnYuTk9ERV9FTlYpLFxufTtcbiJdfQ==

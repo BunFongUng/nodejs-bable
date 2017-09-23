@@ -4,6 +4,8 @@ import express from 'express';
 
 import constants from './config/constants';
 
+import './config/db.connection';
+
 const app = express();
 
 app.listen(constants.PORT, () => {

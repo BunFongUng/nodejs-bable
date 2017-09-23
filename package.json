@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run clean && mkdir -p dist && babel src -D -d dist --source-maps inline",
+    "clean": "rm -rf dist",
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/index.js"
   },
   "keywords": [],
